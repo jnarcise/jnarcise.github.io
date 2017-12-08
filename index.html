@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>dev.bootstrap3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<style>
+  html, body { background: #ADD8C7; }
+#tree { padding-top: 65px !important; position: relative }
+.stump { margin: 0 auto; width: 20px; height: 70px; background: #7A6A53; }
+.snow_globe { padding-top: 55px; }
+.layer_1 {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 120px solid transparent;
+  border-bottom: 100px solid #519548;
+  margin: 0 auto;
+  margin-top: -60px;
+}
+.layer_2 {
+  width: 0;
+  height: 0;
+  border-left: 125px solid transparent;
+  border-right: 125px solid transparent;
+  border-bottom: 95px solid #519548;
+  margin: 0 auto;
+  margin-top: -50px;
+}
+.layer_3 {
+   width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid #519548;
+  margin: 0 auto;
+  margin-top: -50px;
+}
+.layer_4 { 
+  width: 0;
+  height: 0;
+  border-left: 75px solid transparent;
+  border-right: 70px solid transparent;
+  border-bottom: 75px solid #519548;
+  margin: 0 auto;
+  margin-top: -50px;
+}
+.layer_5 {
+  width: 0;
+  height: 0;
+  border-left: 72px solid transparent;
+  border-right: 71px solid transparent;
+  border-bottom: 55px solid #519548;
+  margin: 0 auto;
+  margin-top: -60px;
+}
+.branch_1 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 79px solid transparent;
+  border-right: 0px solid transparent;
+  border-top: 66px solid #519548;
+  margin-top: 70px;
+}
+.branch_2 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 110px solid transparent;
+  border-top: 100px solid #519548;
+  margin-left: -89px;
+  margin-top: 44px;
+}
+.branch_3 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 79px solid transparent;
+  border-right: 0px solid transparent;
+  border-top: 66px solid #519548;
+  margin-top: 71px;
+  margin-left: -41px;
+}
+.branch_4 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 41px solid transparent;
+  border-right: 44px solid transparent;
+  border-top: 71px solid #519548;
+  margin-top: 71px;
+  margin-left: -75px;
+}
+.branch_5 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 63px solid transparent;
+  border-top: 66px solid #519548;
+  margin-top: 65px;
+  margin-left: -112px;
+  transform: rotate(23deg);
+}
+.branch_6 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 63px solid transparent;
+  border-top: 66px solid #519548;
+  margin-top: 79px;
+  margin-left: -107px;
+  transform: rotate(43deg);
+}
+.branch_7 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 66px solid transparent;
+  border-top: 66px solid #519548;
+  margin-top: 52px;
+  margin-left: -85px;
+  transform: rotate(48deg);
+}
+.branch_8 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 66px solid transparent;
+  border-top: 66px solid #519548;
+  margin-top: 52px;
+  margin-left: 16px;
+  transform: rotate(48deg);
+}
+.extra_branch {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 66px solid transparent;
+  border-top: 66px solid #519548;
+  margin-top: 41px;
+  margin-left: 19px;
+  transform: rotate(33deg);
+}
+.extra_branch_2 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 66px solid transparent;
+  border-top: 66px solid #519548;
+  margin-top: 69px;
+  margin-left: 19px;
+  transform: rotate(59deg);
+}
+.extra_branch_3 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 66px solid transparent;
+  border-top: 66px solid #519548;
+  margin-top: 69px;
+  margin-left: 19px;
+  transform: rotate(59deg);
+}
+.extra_branch_4 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 66px solid #519548;
+  margin-top: 2px;
+  margin-left: -117px;
+  transform: rotate(59deg);
+}
+.branch_9 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 53px solid transparent;
+  border-top: 66px solid #519548;
+  margin-top: -35px;
+  margin-left: -50px;
+  transform: rotate(188deg);
+}
+.branch_10 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 66px solid transparent;
+  border-top: 66px solid #519548;
+  margin-top: -18px;
+  margin-left: -35px;
+  transform: rotate(52deg);
+}
+#cat {
+  position: absolute;
+  width: 50px;
+  height: 35px;
+  border-radius: 40%;
+  background: #ebebeb;
+  margin-top: -10px;
+  margin-left: 54px;
+}
+.ear_1, .ear_2 { background: ; }
+.ear_1 { 
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
+  margin-left: 2px;
+  transform: rotate(-19deg);
+}
+.ear_2 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
+  margin-top: 10px;
+  margin-left: 27px;
+  transform: rotate(7deg);
+  margin-top: -7px;
+}
+.nose {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #E08E79;
+  margin-left: 15px;
+  margin-top: -3px;
+  transform: rotate(183deg);
+}
+.left_eye {
+  margin-left: 1px;
+  margin-top: -1px;
+}
+.right_eye {
+  margin-left: 24px;
+  margin-top: -22px;
+}
+.mouth {
+  transform: rotate(0deg);
+  border-bottom: 1px solid #000;
+  width: 5px;
+  margin-left: 18px
+}
+.whisker_left {
+  margin-top: -17px;
+  margin-left: -3px;
+  transform: rotate(-10deg);
+  font-size: 12px;
+}
+.whisker_right {
+  margin-left: 33px;
+  margin-top: -11px;
+  transform: rotate(10deg);
+  font-size: 12px;
+}
+.left_leg {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background: #ebebeb;
+}
+.right_leg {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background: #ebebeb;
+  margin-left: 10px;
+  margin-top: -8px;
+}
+.hind_leg {
+  width: 25px;
+  height: 27px;
+  border-radius: 13px;
+  background: #ebebeb;
+  margin-left: 36px;
+  margin-top: -30px;
+  z-index: -1;
+}
+.foot {
+  background: #ebebeb;
+  width: 20px;
+  height: 9px;
+  transform: rotate(-32deg);
+  margin-left: 33px;
+  margin-top: -6px;
+  border-radius: 62px;
+}
+.tail {
+  margin-top: -76px;
+  margin-left: -4px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 15px 15px 0 0 #ebebeb;
+  z-index: -1;
+  animation: sway infinite;
+  animation-duration: 4s;
+}
+@keyframes sway {
+  0% { margin-left: -4px; }
+  20% { margin-left: -20px; }
+  40% { margin-left: 0px; }
+  60% { margin-left: -5px; }
+  80% { margin-left: -20px; }
+  100% { margin-left: -4px; }
+}
+.light_1 {
+  width: 13px;
+  height: 13px;
+  border-radius: 28px;
+  animation: lightChange infinite;
+  animation-duration: 3s;
+  z-index: 9999999;
+}
+@keyframes lightChange {
+  0% { background: #B11623; }
+  20% { background: #F9D423; }
+  40% { background: #BEF202; }
+  60% { background: #3FB8AF; }
+  80% { background: #F38630; }
+  100% { background: #9D2053; }
+}
+.light_2 {
+  width: 13px;
+  height: 13px;
+  border-radius: 28px;
+  animation: lightChange2 infinite;
+  animation-duration: 3s;
+  z-index: 9999999;
+}
+@keyframes lightChange2 {
+  0% { background: #9D2053; }
+  20% { background: #9D2053; }
+  40% { background: #3FB8AF; }
+  60% { background: #BEF202; }
+  80% { background: #F9D423; }
+  100% { background: #B11623; }
+}
+.extra_branch_4 .light_2 {
+  margin-left: 31px;
+  margin-top: -85px;
+}
+.extra_branch_3 .light_2 {
+  margin-left: 30px;
+  margin-top: -93px;
+}
+.layer_1 .branch_2 .light_2 {
+  margin-top: -27px;
+}
+.layer_2 .light_2 {
+  margin-left: -28px;
+}
+.branch_5 .light_1 {
+  margin-top: -3px;
+  margin-left: -8px;
+}
+.layer_3 .branch_8 .light_2 {
+  margin-top: -70px;
+}
+#star {
+  position: absolute;
+  margin-top: -88px;
+  margin-left: -16px;
+  z-index: 1;
+  font-size: 40px;
+  transform: rotate(20deg);
+}
+@keyframes starLight {
+  0% { color: #F9D423; }
+  20% { color: #EDE574; }
+  40% { color: #E5F04C; }
+  60% { color: #ECBE13; }
+  80% { color: #F4DD51; }
+  100% { color: #FFE545; }
+}
+.fa-star {
+  animation: starLight infinite;
+  animation-duration: 3s;
+  color: #F9D423;
+}
+
+</style>
+<body>
+<!-- Start HTML -->
+<div class="container p-3 mx-auto snow_globe">
+  <div class="row center-block">
+
+    <div class="col-md-4 center-block"></div>
+
+    <div class="col-md-4 center-block">
+      <div id="tree" class="center-block">
+          <div class="layer_6"></div>
+          <div class="layer_5">
+            <div class="branch_9"></div>
+            <div class="branch_10">
+              <div id="star">
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>  
+            </div>
+          </div>
+          <div class="layer_4"></div>
+          <div class="layer_3">
+            <div class="branch_8">
+              <div class="light_2"></div>
+            </div>
+            <div class="branch_7">
+              <div class="light_1"></div>
+            </div>
+            <div class="light_1"></div>
+          </div>
+          <div class="layer_2">
+            <div class="light_2"></div>
+            <div class="branch_6"></div>
+            <div class="extra_branch"></div>
+          </div>
+          <div class="layer_1">
+            <div class="branch_1"></div>
+            <div class="branch_2">
+              <div class="light_2"></div>
+            </div>
+            <div class="branch_3">
+              <div class="light_1"></div>
+            </div>
+            <div class="light_2"></div>
+            <div class="branch_4"></div>
+            <div class="branch_5">
+              <div class="light_1"></div>
+            </div>
+            <div class="extra_branch_2">
+              <div class="light_1"></div>
+            </div>
+            <div class="extra_branch_3">
+              <div class="light_2"></div>
+              <div class="light_1"></div>
+            </div>
+            <div class="extra_branch_4">
+              <div class="light_1"></div>
+              <div class="light_2"></div>
+            </div>
+
+          </div>
+          <div class="stump"></div>
+      </div>
+      <div id="cat">
+        <div class="ear_1"></div>
+        <div class="ear_2"></div>
+        <div class="left_eye">
+          <i class="fa fa-eye" aria-hidden="true"></i>
+        </div>
+        <div class="right_eye">
+          <i class="fa fa-eye" aria-hidden="true"></i>
+        </div>
+        <div class="nose"></div>
+        <div class="mouth"></div>
+        <div class="whisker_left">
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+        </div>
+        <div class="whisker_right">
+          <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+        </div>
+        <div class="left_leg"></div>
+        <div class="right_leg"></div>
+        <div class="hind_leg"></div>
+        <div class="foot"></div>
+        <div class="tail"></div>
+    </div>
+
+    <div class="col-md-4 center-block"></div>  
+
+  </div>    
+</div>  
+<!-- /. -->
+<!-- Latest compiled and minified JavaScript -->
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
